@@ -1,5 +1,6 @@
 {
   "extends": [
+    "airbnb-typescript",
     "plugin:@nx/react-typescript",
     "next",
     "next/core-web-vitals",
@@ -9,6 +10,9 @@
   "overrides": [
     {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+      "parserOptions": {
+        "project": ["apps/org/tsconfig(.*)?.json"]
+      },
       "rules": {
         "@next/next/no-html-link-for-pages": ["error", "apps/org/pages"]
       }
